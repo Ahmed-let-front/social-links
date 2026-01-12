@@ -1,0 +1,125 @@
+/* start variabels */
+:root {
+  --Green: #c5f82a;
+  --mainColor: #141414;
+  --seconderyColor: #1f1f1f;
+  --thirdColor: #333333;
+  --h1Color: #ffffff;
+}
+/* end variabels */
+/* start global values */
+@font-face {
+  font-family: "inter";
+  src: url("../assets/fonts/Inter-VariableFont_slnt,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "inter", system-ui, serif;
+  background-color: var(--mainColor, #141414);
+  display: grid;
+  place-items: center;
+  min-block-size: 100vh;
+}
+html {
+  font-size: 0.875rem;
+}
+/* end global values */
+/* social-links profile design mobil */
+main {
+  inline-size: calc(100% - 40px);
+}
+article {
+  margin: auto;
+  inline-size: 100%;
+  max-inline-size: 380px;
+  text-align: center;
+  background-color: var(--seconderyColor, #1f1f1f);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  padding: 1.5rem;
+  @media (min-width: 73rem) {
+    padding: 2rem;
+  }
+}
+/* header of social links */
+header {
+  .logo-girl {
+    width: 70px;
+    height: 70px;
+    margin-block: 5px 15px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+  }
+  h1 {
+    color: var(--h1Color, #ffffff);
+    margin-block-end: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .header-p {
+    color: var(--Green, #c5f82a);
+    font-weight: 600;
+    margin-block-end: 25px;
+  }
+}
+/* header of social links */
+/* body social links */
+.body-of-social-links {
+  h2 {
+    color: var(--h1Color, #ffffff);
+    font-size: 0.85rem;
+    margin-block-end: 20px;
+    font-weight: 600;
+  }
+  .links {
+    background-color: var(--thirdColor, #333333);
+    border-radius: 10px;
+    padding: 10px;
+    margin-block-end: 10px;
+    &:hover {
+      background-color: var(--Green, #c5f82a);
+      cursor: pointer;
+    }
+    a {
+      text-decoration: none;
+      color: var(--h1Color, #ffffff);
+      font-weight: 600;
+      .links:hover & {
+        color: var(--mainColor, #141414);
+      }
+    }
+  }
+}
+/* body social links */
+/* social-links profile design mobil */
+/* footer of my project */
+.attribution {
+  position: absolute;
+  color: white;
+  bottom: 10px;
+  text-align: center;
+  margin: auto;
+  font-size: clamp(5px, 2vw, 1rem);
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+/* position fotter in desktop (1024px) */
+@media (max-width: 54rem) {
+  .attribution {
+    bottom: 4px;
+  }
+}
+@media (min-width: 89rem) {
+  .attribution {
+    bottom: 218px;
+  }
+}
